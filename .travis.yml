@@ -13,11 +13,9 @@ script: make
 before_deploy: zip pidgin-wincred_${TRAVIS_TAG}.zip pidgin-wincred.dll
 deploy:
   provider: releases
-  api_key:
-    secure: gGoos91hSV0QmvpnnOTcUhSDJQWVe/LLTXXNTlVaPztzNbayzgUbwTZ9wERKLnymRyvWEaC1kGCqM9qN6YvlD91z8F0NuCiuGhdWMYVPf5LpXQRgSo+PqZXLXYJLqrw+wwH96wuevoeIv9W5RxpfF2USif3S7JBUtcPy8fUoBus=
   file: pidgin-wincred_${TRAVIS_TAG}.zip
   skip_cleanup: true
   on:
-    repo: aebrahim/pidgin-wincred
+    repo: MPavleski/pidgin-wincred
     all_branches: true
     tags: true
