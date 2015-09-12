@@ -13,8 +13,10 @@ script: make
 before_deploy: zip pidgin-wincred_${TRAVIS_TAG}.zip pidgin-wincred.dll
 deploy:
   provider: releases
-  file: pidgin-wincred_${TRAVIS_TAG}.zip
   skip_cleanup: true
+  api_key:
+    secure: S967FvrxvfVCn1i0ACHjMQe2DQjEABEiCKgCts0nDl20BnVT73EtiZCVW0wK5I2flOz70NI/8BF3byVBrrah8TvEoPofDFUshM/AuJlIQXLR1e3I1+s8Vxh0sy8iursB/gJf9TNRSi00Nmsy2MVvSRhy0LstMtMdkkMMfkZuB6tBiEO8RxFqTICqyYr1uwqe2zk9eVZNZ9uzUkASS1/FX8LZZb1hAK+v+v3EauuRPqINcVSTwFnxsxsyIeqZNpi+uTx8eDeTaDVbaQM/w5zq370TNRU24I0XoXGeUssCTsMMp2PEGH4RKhLNBTMGnAeawvLToiz9GAdvq+gesJtIBJgzSAw2B0GPu7vKntplU+5OUDGk1sYWxxse5BKrVFAWx43bkIHkW+yj+2Ri3FXr/m4kKzekJyQmwUMepcyExla6rxlloSs0SWgya9Pl82hFZeytYGcBlxA9vxb6CUUfZehFXjGb0EhlNqZUfmcV+MvcfuORWOudUiuvatGWQYdk31ygEcc5FLI+x12q9YR9Oo3liIoqyzAUNLiSvZ0s2iZiC2W08I+2y3gSdJ2SBxv56jAfj+IGfNuIly/cGp8Jie9utr82AqHBPiVED5RQoUnmMExde/N9KrzJaaagaH0dfAcflrey2qmFGNVqZbv7BcXz94TdbF6UjvAQ18CDgoA=
+  file: pidgin-wincred_${TRAVIS_TAG}.zip
   on:
     repo: MPavleski/pidgin-wincred
     all_branches: true
